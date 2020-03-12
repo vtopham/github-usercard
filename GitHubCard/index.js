@@ -99,7 +99,7 @@ function createCard(inputObj) {
           cardInfo.appendChild(following);
           //create p
           let bio = document.createElement("p");
-          bio.textContent = `Following: ${inputObj.bio}`;
+          bio.textContent = `Bio: ${inputObj.bio}`;
           cardInfo.appendChild(bio);
 
   // console.log("hello");
