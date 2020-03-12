@@ -3,11 +3,6 @@
            https://api.github.com/users/<your name>
 */
 
-axios.get("https://api.github.com/users/dustinmyers")
-  .then(response => {
-    // console.log(response);
-  });
-
 
 
 
@@ -35,6 +30,14 @@ axios.get("https://api.github.com/users/dustinmyers")
           Using that array, iterate over it, requesting data for each user, creating a new card for each
           user, and adding that card to the DOM.
 */
+
+//TESTING, TESTING
+axios.get("https://api.github.com/users/dustinmyers")
+  .then(response => {
+    // console.log(response);
+  });
+
+
 
 //get the names i want to display
 const namesArray = ["tetondan", "dustinmyers", "justsml", "luishrd", "bigknell"]
@@ -82,8 +85,8 @@ function createCard(inputObj) {
 
           //create a
           let githubAddress = document.createElement("a");
-          githubAddress.href = inputObj.url;
-          githubAddress.textContent = inputObj.url;
+          githubAddress.href = inputObj.html_url;
+          githubAddress.textContent = inputObj.html_url;
           //create p
           let profile = document.createElement("p");
           profile.textContent = `Profile: ${githubAddress}`;
